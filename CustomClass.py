@@ -127,6 +127,7 @@ class CustomClass:
 
                 # Calculate complexity score based on GPT response
                 gpt_response = self.generate_gpt_response(prompt)
+                return gtp_response
                 complexity_score = len(word_tokenize(gpt_response))
 
                 # Print repository analysis
