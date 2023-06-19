@@ -78,8 +78,8 @@ class CustomClass:
         user_url = f"https://github.com/{user_id}"
         
         try:
-            user = GitHubUser(giturl=user_url)
-            repositories = self.fetch_user_repositories(user.giturl)
+            #user = GitHubUser(giturl=user_url)
+            repositories = self.fetch_user_repositories(user_url)
 
             complex_repository = None
             max_complexity = float('-inf')
