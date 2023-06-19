@@ -74,7 +74,7 @@ class CustomClass:
 
     def analyze_repositories(self, user_id):
         # Take GitHub user ID as input
-
+        result_text = ""
         user_url = f"https://github.com/{user_id}"
         
         try:
