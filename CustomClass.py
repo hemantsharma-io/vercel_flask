@@ -83,7 +83,7 @@ class CustomClass:
         
         # Parse the response
         data = response.json()
-        return data
+        return response.request.headers
         return data['choices'][0]['text'].strip()
         
         response = openai.Completion.create(
