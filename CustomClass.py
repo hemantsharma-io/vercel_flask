@@ -76,7 +76,7 @@ class CustomClass:
         # Take GitHub user ID as input
 
         user_url = f"https://github.com/{user_id}"
-
+        return user_url
         try:
             user = GitHubUser(giturl=user_url)
             repositories = self.fetch_user_repositories(user.giturl)
