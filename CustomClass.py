@@ -44,7 +44,7 @@ class CustomClass:
 
         # Fetch the user repositories using the GitHub API
         api_url = f"https://api.github.com/users/{username}/repos"
-        response = requests.get(api_url, timeout=10, headers=headers)
+        response = requests.get(api_url, timeout=10)
 
         # Check if the request was successful
         response.raise_for_status()
