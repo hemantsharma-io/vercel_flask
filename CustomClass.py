@@ -19,7 +19,7 @@ class GitHubUser:
     giturl: str
 
 class CustomClass:
-    openai.api_key = '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
+    openai.api_key = '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'
     def process_url(self, user_id):
         # Perform custom processing with the URL
         # Replace this with your actual processing logic
