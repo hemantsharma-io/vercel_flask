@@ -6,21 +6,12 @@ from urllib.parse import urlparse
 from nltk.tokenize import word_tokenize
 
 
-access_token = "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"
-headers = {
-    "Authorization": f"Bearer {access_token}",
-    "Accept": "application/vnd.github.v3+json"
-}
-
-openai.api_key = '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'
-
 
 @dataclass
 class GitHubUser:
     giturl: str
 
 class CustomClass:
-    openai.api_key = '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'
     def process_url(self, user_id):
         # Perform custom processing with the URL
         # Replace this with your actual processing logic
