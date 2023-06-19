@@ -1,5 +1,6 @@
 import openai
 import requests
+import json
 from dataclasses import dataclass
 from urllib.parse import urlparse
 from nltk.tokenize import word_tokenize
