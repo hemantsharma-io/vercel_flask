@@ -59,6 +59,40 @@ class CustomClass:
 
     # Function to generate GPT-3.5 response using OpenAI API
     def generate_gpt_response(self, prompt):
+        openai_key = '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'
+
+        # API endpoint
+        api_url = 'https://api.openai.com/v1/engines/davinci-codex/completions'
+        
+        # Define the prompt you want to generate completion for
+        # prompt = "Once upon a time"
+        
+        # Set the maximum number of tokens in the response
+        max_tokens = 50
+        
+        # Set the temperature parameter (higher values make the output more random)
+        temperature = 0.8
+        
+        # Create the payload for the API request
+        payload = {
+            'prompt': prompt,
+            'max_tokens': max_tokens,
+            'temperature': temperature
+        }
+        
+        # Set the headers with your API key
+        headers = {
+            'Authorization': f'Bearer {openai_key}',
+            'Content-Type': 'application/json'
+        }
+        
+        # Make the API request
+        response = requests.post(api_url, headers=headers, data=json.dumps(payload))
+        
+        # Parse the response
+        data = response.json()
+        return data['choices'][0]['text'].strip()
+        
         response = openai.Completion.create(
             engine="text-davinci-003",
             prompt=prompt,
